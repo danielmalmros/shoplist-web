@@ -1,9 +1,10 @@
-Firebase Realtime Database Quickstart
+Shopping list with Firebase
 =============================
 
-The Firebase Database quickstart demonstrates how to connect to the Firebase Realtime Database and
-to send and retrieve data through a simple social blogging app. It will interoperate with the iOS and
-Android database quickstarts.
+This is a school project that demonstrats a shopping list that is hooked up to firebase.
+The web-application have a existing Android app that is conneted to firebase to sync the two solutions.
+
+You can find the Android app [here](https://github.com/danielmalmros/shoplist-android)
 
 Introduction
 ------------
@@ -18,13 +19,3 @@ Getting Started
  1. You must have the Firebase CLI installed. If you don't have it install it with `npm install -g firebase-tools` and then configure it with `firebase login`.
  1. On the command line run `firebase use --add` and select the Firebase project you have created.
  1. On the command line run `firebase serve` using the Firebase CLI tool to launch a local server.
-
-Support
--------
-
-- [Firebase Support](https://firebase.google.com/support/)
-
-License
--------
-
-© Google, 2016. Licensed under an [Apache-2](../LICENSE) license.

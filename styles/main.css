@@ -1,0 +1,38 @@
+body {
+    background: #efefef;
+    color: #333;
+}
+
+h1,
+h3 {
+    text-align: center;
+    color: #787878;
+}
+
+.shopping-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.shopping-list__header {
+  text-align: center;
+}
+
+.shopping-list__form {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.shopping-list__table {
+  display: flex;
+  justify-content: center;
+}
+
+.shopping-list__table table {
+  width: 50%;
+}
