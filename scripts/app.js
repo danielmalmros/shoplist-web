@@ -5,6 +5,7 @@ class ShopList {
     if (domNode) {
       this.root = domNode;
       this.databaseRef = firebase.database().ref("items");
+      this.itemId
       
       this.init();
     } else {
@@ -15,29 +16,25 @@ class ShopList {
   // Find all nods from this.root
   findNodes() {
     this.formSubmit = this.root.querySelector('.shoplist-form');
-    this.shoppingListTabel = this.root.querySelector('.js-shopping-list')
+    this.shoppingListTabel = this.root.querySelector('.js-shopping-list');
     this.snackbarContainer = this.root.querySelector('.js-shopping-list-snackbar');
-    this.showSnackbarButton = this.root.querySelector('.js-shopping-list-clear');
   }
 
   // Attacth all events for this class
   attacthEvents() {
     this.formSubmit.addEventListener("submit", (e) => this.saveToFirebase(e));
-    this.showSnackbarButton.addEventListener('click', () => this.removeAllItems());
   }
 
-  snackBarHandler() {
-    console.log('UNDO');
-  }
+  removeSingleItems(e) {
+    e.stopPropagation();
+    this.itemId = e.target.parentNode.parentNode.getAttribute("data-id");
+    this.databaseRef.child(this.itemId).remove();
 
-  removeAllItems() {
-    this.databaseRef.remove();
-    var data = {
-      message: 'Deleted all items in list.',
-      timeout: 2000,
-      actionHandler: this.snackBarHandler,
-      actionText: 'Undo'
-    };
+    // Show snackbar when item is removed
+    let data = {
+      message: 'Removed item...',
+      timeout: 2000
+    }
     this.snackbarContainer.MaterialSnackbar.showSnackbar(data);
   }
 
@@ -70,36 +67,48 @@ class ShopList {
     if (name.length > 0 && quantity && variant.length > 0) {
       this.postNewItem(name, quantity, variant)
     }
-    // this.formSubmit.reset()
   }
 
   // RefreshUI when getting data from firebase
   // Using E6 Template literals for better markup syntax
   refreshUI(list) {
-    let html = '';
+    let html = '',
+        itemId;
     for (var i = 0; i < list.length; i++) {
       html += `
-      <tr>
+      <tr data-id="${ list[i].id }">
         <td class="mdl-data-table__cell--non-numeric">${ list[i].name }</td>
         <td>${ list[i].quantity }</td>
         <td>${ list[i].variant }</td>
+        <td>
+          <button class="js-shopping-list-delete mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Remove</button>
+        </td>
       </tr>
       `
     }
     this.shoppingListTabel.innerHTML = html;
+
+    // Creating the event listener for delete button here so it can be found when UI is refreshed.
+    this.deleteSingleItems = this.root.querySelectorAll('.js-shopping-list-delete');
+    this.deleteSingleItems.forEach((el, i) => {
+      el.addEventListener('click', (e) => this.removeSingleItems(e, i));
+    });
   }
 
   // Get data from firebase
   getShoppingList() {
-
     this.databaseRef.on("value", (snapshot) => {
       let list = [];
       snapshot.forEach((childSnapshot) => {
-        let childData = childSnapshot.val();
+
+        let childData = childSnapshot.val(),
+            itemKey = childSnapshot.key;
+
         list.push({
           name: childData.name,
           quantity: childData.quantity,
-          variant: childData.variant
+          variant: childData.variant,
+          id: itemKey
         })
       });
       this.refreshUI(list)
@@ -109,9 +118,9 @@ class ShopList {
   // Collect all fuctions that should be called when the class is initialized
   // this.init() is called in the constructor
   init() {
+    this.getShoppingList();
     this.findNodes();
     this.attacthEvents();
-    this.getShoppingList();
   }
 }
 

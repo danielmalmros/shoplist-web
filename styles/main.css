@@ -1,12 +1,17 @@
 body {
-    background: #efefef;
-    color: #333;
+  background: #fff;
+  color: #333;
 }
 
 h1,
 h3 {
-    text-align: center;
-    color: #787878;
+  text-align: center;
+  color: #fff;
+  margin-top: 0;
+}
+.submit-btn {
+  display: block;
+  width: 100%;
 }
 
 .shopping-list {
@@ -20,19 +25,24 @@ h3 {
 
 .shopping-list__header {
   text-align: center;
+  padding: 40px 0;
+  color: #fff;
+  background: #00897B;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
 }
 
 .shopping-list__form {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .shopping-list__table {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .shopping-list__table table {
-  width: 50%;
+  width: 60%;
 }

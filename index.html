@@ -39,18 +39,19 @@
 
 <body>
   <div id="app">
-    <div class="shopping-list">
-      <div class="shopping-list__header">
+    <div class="shopping-list__header">
+      <div class="shopping-list">
         <h1>Shopping list</h1>
         <p>This shopping list is connected to firebase and work together with the existing Android app</p>
-
-        <button class="mdl-button mdl-js-button mdl-button--raised js-shopping-list-clear" type="button">Clear list</button>
+  
         <div class="mdl-js-snackbar mdl-snackbar js-shopping-list-snackbar">
           <div class="mdl-snackbar__text"></div>
           <button class="mdl-snackbar__action" type="button"></button>
         </div>
       </div>
+    </div>
 
+    <div class="shopping-list">
       <div class="shopping-list__form">
         <form class="shoplist-form">
           <div class="mdl-textfield mdl-js-textfield">
@@ -78,7 +79,7 @@
             </ul>
           </div>
 
-          <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit" value="Submit">
+          <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect submit-btn" type="submit" value="Add item">
         </form>
       </div>
 
@@ -89,6 +90,7 @@
               <th class="mdl-data-table__cell--non-numeric">Name</th>
               <th>Quantity</th>
               <th>Variant</th>
+              <th></th>
             </tr>
           </thead>
           <tbody class="js-shopping-list">

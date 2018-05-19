@@ -39,3 +39,90 @@
 [info] i  hosting: Serving hosting files from: ./
 [info] +  hosting: Local server: http://localhost:5000
 
+[debug] [2018-05-17T06:49:35.075Z] ----------------------------------------------------------------------
+[debug] [2018-05-17T06:49:35.078Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Daniel Malmros\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-17T06:49:35.079Z] CLI Version:   3.18.4
+[debug] [2018-05-17T06:49:35.079Z] Platform:      win32
+[debug] [2018-05-17T06:49:35.079Z] Node Version:  v8.9.4
+[debug] [2018-05-17T06:49:35.079Z] Time:          Thu May 17 2018 08:49:35 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-17T06:49:35.079Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-17T06:49:35.110Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-17T06:49:35.111Z] > authorizing via signed-in user
+[debug] [2018-05-17T06:49:35.114Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-17T06:49:35.115Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/TeUzN1N_7DKcfe3pI1Lr9Q_2SfhC70819aRr3vuSAVc',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu May 17 2018 08:49:35 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-17T06:49:35.297Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-17T06:49:35.318Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/shoppinglist-8c913  
+  
+ Thu May 17 2018 08:49:35 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-17T06:49:36.096Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-17T06:49:36.097Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/shoppinglist-8c913/tokens  
+  
+ Thu May 17 2018 08:49:36 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-17T06:49:36.993Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-17T06:49:36.994Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/shoppinglist-8c913  
+  
+ Thu May 17 2018 08:49:36 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-17T06:49:37.812Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\git\shopping-list'...
+[info] 
+[debug] [2018-05-17T06:49:37.817Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/295901318951/clients/_:getWebAppConfig  
+  
+ Thu May 17 2018 08:49:37 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-17T06:49:38.354Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-19T09:20:36.249Z] ----------------------------------------------------------------------
+[debug] [2018-05-19T09:20:36.252Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Daniel Malmros\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-19T09:20:36.252Z] CLI Version:   3.18.4
+[debug] [2018-05-19T09:20:36.252Z] Platform:      win32
+[debug] [2018-05-19T09:20:36.252Z] Node Version:  v8.9.4
+[debug] [2018-05-19T09:20:36.253Z] Time:          Sat May 19 2018 11:20:36 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-19T09:20:36.253Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-19T09:20:36.281Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-19T09:20:36.283Z] > authorizing via signed-in user
+[debug] [2018-05-19T09:20:36.287Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-19T09:20:36.287Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/TeUzN1N_7DKcfe3pI1Lr9Q_2SfhC70819aRr3vuSAVc',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat May 19 2018 11:20:36 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-19T09:20:36.472Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-19T09:20:36.490Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/shoppinglist-8c913  
+  
+ Sat May 19 2018 11:20:36 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-19T09:20:37.210Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-19T09:20:37.213Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/shoppinglist-8c913/tokens  
+  
+ Sat May 19 2018 11:20:37 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-19T09:20:37.987Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-19T09:20:37.988Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/shoppinglist-8c913  
+  
+ Sat May 19 2018 11:20:37 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-19T09:20:38.760Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\git\shopping-list'...
+[info] 
+[debug] [2018-05-19T09:20:38.770Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/295901318951/clients/_:getWebAppConfig  
+  
+ Sat May 19 2018 11:20:38 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-19T09:20:39.254Z] <<< HTTP RESPONSE 200
+[warn] !  hosting: Port 5000 is not available. Trying another port...
+[debug] [2018-05-19T09:20:39.329Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/295901318951/clients/_:getWebAppConfig  
+  
+ Sat May 19 2018 11:20:39 GMT+0200 (Rom, sommertid)
+[debug] [2018-05-19T09:20:39.707Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5004
+
