@@ -12,6 +12,12 @@ h3 {
 .submit-btn {
   display: block;
   width: 100%;
+  background: #00897B;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background: #00695C;
 }
 
 .shopping-list {
@@ -19,7 +25,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  max-width: 1170px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -37,6 +43,11 @@ h3 {
   margin-top: 50px;
 }
 
+.shoplist-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .shopping-list__table {
   display: flex;
   justify-content: center;
@@ -44,5 +55,5 @@ h3 {
 }
 
 .shopping-list__table table {
-  width: 60%;
+  width: 100%;
 }
